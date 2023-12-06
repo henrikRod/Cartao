@@ -17,16 +17,184 @@ html {
 }
 
 body {
-  background-color: var(--blue);
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  background-color: var(--blue);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-section {
+.top,
+.bottom {
   height: 50%;
-  padding: 20px;
+}
+
+.container-card {
+  width: 270px;
+  height: 176px;
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  transform: rotateX(180deg);
+}
+
+.card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  backface-visibility: hidden;
+  background-color: var(--laranja);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.container-logos-front {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-inter {
+  width: 50%;
+}
+
+.logo-master-r-y {
+  width: 85%;
+}
+
+.container-name h1 {
+  writing-mode: vertical-lr;
+  font-size: 1.3rem;
+  font-family: var(--fontInter);
+  color: white;
+  font-weight: 400;
+}
+
+.container-aprox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-aprox img {
+  position: relative;
+  top: 90px;
+  right: 20px;
+  scale: .9;
+}
+
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  background-color: var(--laranja);
+  border-radius: 10px;
+}
+
+.rect-gray {
+  position: relative;
+  margin-top: 10px;
+  background-color: var(--prata);
+  width: 100%;
+  height: 20%;
+}
+
+.right-back {  
+  width: 100%;
+  height: calc(80% - 10px);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 10px;
+  font-family: var(--fontInter);
+  color: white;
+}
+
+h3 {
+  align-self: flex-end;
+  transform: rotate(90deg) translate(-10px, -5px);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#number {
+  writing-mode: vertical-lr;
+  font-size: .96rem;
+  font-weight: 600;
+}
+
+.container-datas {
+  writing-mode: vertical-rl;
+  display: grid;
+  grid-template-rows: 40px;
+  grid-template-columns: 45px 1fr;
+  grid-template-areas: 
+    "agen account"
+    "cod valid"
+  ;
+}
+
+.container-datas h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.container-agen {
+  grid-area: agen;
+}
+
+.container-account {
+  grid-area: account;
+}
+
+.container-cod {
+  grid-area: cod;
+}
+.container-valid {
+  grid-area: valid;
+}
+
+.container-logos-back {
+  display: grid;
+  column-gap: 10px;
+  grid-template-areas: 
+    "qr ."
+    "symbol mast-cirr"
+  ;
+}
+
+.qr-code {
+  grid-area: qr;
+  align-self: center;
+}
+
+.master-siymbol {
+  grid-area: symbol;
+  align-self: end;
+}
+
+.master-cirrus {
+  grid-area: mast-cirr;
+  align-self: end;
 }
