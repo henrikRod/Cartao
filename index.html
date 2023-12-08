@@ -21,9 +21,7 @@
             <img src="assets/signal.svg" alt="Aprox">
           </div>
 
-          <div class="container-name">
-            <h1 id="nome">Nome Sobrenome</h1>
-          </div>
+          <h1 id="nome">Nome Sobrenome</h1>
 
           <div class="container-logos-front">
             <img class="logo-inter" src="assets/logo-inter.svg" alt="Logo inter">
@@ -85,51 +83,31 @@
 
   <section class="bottom">
 
-    <article>
+    <form action="script.js" method="get">
+    
+      <label for="formName">Name</label>
+      <input type="text" id="formName">
 
-      <form action="script.js" method="get">
-        
-        <div class="form-cont-name">
-          <label for="formName">Name</label>
-          <input type="text" id="formName">
-        </div>
+      <label for="formNumber">Número</label>
+      <input type="number" id="formNumber">
 
-        <div class="form-cont-num">
-          <label for="formNumber">Número</label>
-          <input type="number" id="formNumber">
-        </div>
+      <article class="cont-datas">
 
-        <article class="cont-datas">
+        <label for="formAgen">Agência</label>
+        <input type="number" id="formAgen">
 
-          <div class="form-cont-agen">
-            <label for="formAgen">Agência</label>
-            <input type="number" id="formAgen">
-          </div>
+        <label for="formCod">Cód</label>
+        <input type="number" id="formCod">
 
-          <div class="form-cont-cod">
-            <label for="formCod">Cód</label>
-            <input type="number" id="formCod">
-          </div>
+        <label for="formAccount">Conta</label>
+        <input type="number" id="formAccount">
 
-          <aside>
-  
-            <div class="form-cont-acc">
-              <label for="formAccount">Conta</label>
-              <input type="number" id="formAccount">
-            </div>
-  
-            <div class="form-cont-valid">
-              <label for="formValid">Validade</label>
-              <input type="number" id="formValid">
-            </div>
+        <label for="formValid">Validade</label>
+        <input type="number" id="formValid">
 
-          </aside>
+      </article>
 
-        </article>
-
-      </form>
-
-    </article>
+    </form>
 
   </section>
 </body>
