@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
 :root {
   --laranja: rgb(255, 122, 0);
   --blue: rgb(0, 8, 20);
   --prata: rgb(192, 192, 192);
-  --fontInter : 'Inter', sans-serif;
+  --fontInter: "Inter", sans-serif;
 }
 
 * {
@@ -19,10 +19,14 @@ html {
 body {
   width: 100vw;
   height: 100vh;
+
   background-color: var(--blue);
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  font-size: 1.6rem;
 }
 
 .top,
@@ -33,6 +37,7 @@ body {
 .container-card {
   width: 270px;
   height: 175px;
+
   position: relative;
   top: 50%;
   left: 50%;
@@ -41,8 +46,10 @@ body {
 
 .card {
   position: absolute;
+
   width: 100%;
   height: 100%;
+
   transform-style: preserve-3d;
   transition: all 0.5s;
 }
@@ -53,13 +60,19 @@ body {
 
 .card-front {
   position: absolute;
+
   width: 100%;
   height: 100%;
   padding: 10px;
+
   backface-visibility: hidden;
+
   background-color: var(--laranja);
+
   border-radius: 10px;
+
   display: flex;
+
   flex-direction: row-reverse;
   justify-content: space-between;
 }
@@ -87,7 +100,7 @@ h1 {
   font-weight: 400;
 }
 
-.container-aprox{
+.container-aprox {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,34 +110,43 @@ h1 {
   position: relative;
   top: 90px;
   right: 20px;
-  scale: .9;
+
+  scale: 0.9;
 }
 
 .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
+
   backface-visibility: hidden;
+
   transform: rotateX(180deg);
+
   background-color: var(--laranja);
+
   border-radius: 10px;
 }
 
 .rect-gray {
   position: relative;
-  margin-top: 10px;
+
   background-color: var(--prata);
+
   width: 100%;
   height: 20%;
+  margin-top: 10px;
 }
 
-.right-back {  
+.right-back {
   width: 100%;
   height: calc(80% - 10px);
+  padding: 10px;
+
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  padding: 10px;
+  
   font-family: var(--fontInter);
   color: white;
 }
@@ -138,19 +160,23 @@ h3 {
 
 #number {
   writing-mode: vertical-lr;
-  font-size: .96rem;
+  font-size: 0.96rem;
   font-weight: 500;
 }
 
 .container-datas {
   writing-mode: vertical-rl;
+  
   display: grid;
   grid-template-rows: 40px;
   grid-template-columns: 45px 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "agen account"
-    "cod valid"
-  ;
+    "cod valid";
+}
+
+.container-datas p {
+  font-size: 1rem;
 }
 
 .container-datas h2 {
@@ -176,10 +202,9 @@ h3 {
 .container-logos-back {
   display: grid;
   column-gap: 10px;
-  grid-template-areas: 
+  grid-template-areas:
     "qr ."
-    "symbol mast-cirr"
-  ;
+    "symbol mast-cirr";
 }
 
 .qr-code {
@@ -217,7 +242,14 @@ form {
   color: white;
   font-family: var(--fontInter);
   font-weight: 400;
-  font-size: 10px;
+  font-size: 1rem;
+}
+
+.input-wrapper {
+  position: relative;
+
+  width: fit-content;
+  height: 22px;
 }
 
 input {
@@ -233,10 +265,17 @@ input {
   padding: 3px 0 3px 5px;
 
   color: white;
+
+  appearance: none;
+  -webkit-appearence: none;
 }
 
-input:focus  {
-  color: var(--laranja);
+label {
+  position: absolute;
+
+  transform: translateY(-50%);
+  top: 50%;
+  left: .8rem;
 }
 
 .form-cont-num,
@@ -248,25 +287,23 @@ article.cont-datas {
   display: grid;
   grid-template-columns: 75px 1fr;
   gap: 10px 20px;
-  grid-template-areas: 
-  'formAgen formAcc'
-  'formCod formValid'
-  ;
+  grid-template-areas:
+    "box-agen box-acc"
+    "box-cod box-valid";
 }
 
-.form-cont-agen {
-  grid-area: formAgen;
+.box-agen {
+  grid-area: box-agen;
 }
 
-.form-cont-acc {
-  grid-area: formAcc;
+.box-acc {
+  grid-area: box-acc;
 }
 
-.form-cont-cod {
-  grid-area: formCod;
+.box-cod {
+  grid-area: box-cod;
 }
 
-.form-cont-valid {
-  grid-area: formValid;
+.box-valid {
+  grid-area: box-valid;
 }
-
