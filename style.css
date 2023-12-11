@@ -248,11 +248,10 @@ form {
 .input-wrapper {
   position: relative;
 
-  width: fit-content;
-  height: 22px;
+  width: 100%;
 }
 
-input {
+.input-wrapper input {
   border: none;
   border-radius: 5px;
   border: 1px solid var(--laranja);
@@ -270,12 +269,22 @@ input {
   -webkit-appearence: none;
 }
 
+.input-wrapper input[type= "number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
 label {
   position: absolute;
+
+  pointer-events: none;
 
   transform: translateY(-50%);
   top: 50%;
   left: .8rem;
+}
+
+input:focus ~ label {
+  color: red;
 }
 
 .form-cont-num,
