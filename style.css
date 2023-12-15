@@ -18,8 +18,24 @@ body {
   height: 100vh;
   font-size: 1.6rem;
   background-color: var(--blue);
+  
+  color: white;
+  font-family: var(--fontInter);
 }
 
+.container-card {
+  display: inline-block;
+  position: relative;
+}
+
+#nameCard {
+  position: absolute;
+  top: 20px;
+  left: 45%;
+
+  writing-mode:vertical-rl;
+  font-size: 1.6rem;
+}
 
 form {
   position: relative;
