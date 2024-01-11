@@ -15,7 +15,6 @@
 
 body {
   width: 100vw;
-  height: 100vh;
   font-size: 1.6rem;
   background-color: var(--blue);
   
@@ -23,26 +22,103 @@ body {
   font-family: var(--fontInter);
 }
 
+.page {
+  max-width: 50rem;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
 .container-card {
-  display: inline-block;
   position: relative;
+  
+  max-width: 28rem;
+}
+
+.container-card svg{
+  display: block;
+  width: 100%;
+  height: 100%s;
 }
 
 #nameCard {
   position: absolute;
-  top: 20px;
+  top: 2rem;
   left: 45%;
 
   writing-mode:vertical-rl;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+#cardBack {
+  position: relative;
+}
+
+.infoBack {
+  position: absolute;
+  top: 5rem;
+  right: 20%;
+  writing-mode: vertical-rl;
+}
+
+.infoBack > h2 {
+  font-size: 1.24rem;
+  font-weight: 500;
+  margin-left: 2rem;
+}
+
+.gridInfoBack  {
+  display: grid;
+  grid-template-areas: 
+  "agen account"
+  "cod valid"
+  ;
+  grid-template-columns: 1fr 2fr;
+  gap: .8rem ;
+}
+
+.infoBack h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.gridInfoBack p {
+font-size: 1.3rem;
+font-weight: 500;
+}
+
+#agen {
+  grid-area: agen;
+}
+
+#account {
+  grid-area: account;
+}
+
+#cod {
+  grid-area: cod;
+}
+
+#valid {
+  grid-area: valid;
 }
 
 form {
   position: relative;
 
-  max-width: 300px;
-  height: 195px;
-  padding: 15px;
+  width: 100%;
+  max-width: 28rem;
+  height: 18rem;
+  padding: 1.5rem;
 
   border-radius: 10px;
   border: 1px solid var(--laranja);
